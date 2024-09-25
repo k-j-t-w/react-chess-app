@@ -161,7 +161,7 @@ export default function Referee() {
 
     return (
         <>
-            <p style={{ color: "white", fontSize: "24px", textAlign: "center" }}>Total turns: {board.totalTurns}</p>
+            
             <div className="modal hidden" ref={modalRef}>
                 <div className="modal-body">
                     <img onClick={() => promotePawn(PieceType.ROOK)} src={`/assets/images/rook_${promotionTeamType()}.png`} />
@@ -173,7 +173,7 @@ export default function Referee() {
             <div className="modal hidden" ref={checkmateModalRef}>
                 <div className="modal-body">
                     <div className="checkmate-body">
-                        <span>The winning team is {board.winningTeam === TeamType.OUR ? "white" : "black"}!</span>
+                        <span>Checkmate. {board.winningTeam === TeamType.OUR ? "White" : "Black"} wins!</span>
                         <button onClick={restartGame}>Play again</button>
                     </div>
                 </div>
